@@ -1,0 +1,349 @@
+@use '../utils' as *;
+
+
+.w-img {
+
+	width: 100%;
+
+}
+
+.m-img {
+	& img {
+		max-width: 100%;
+	}
+}
+
+.fix {
+	overflow: hidden
+}
+
+.clear {
+	clear: both;
+}
+
+.z-index-1 {
+	z-index: 1;
+}
+
+.z-index-11 {
+	z-index: 11 !important;
+}
+
+.br-20 {
+	border-radius: 20px;
+}
+
+.br-15 {
+	border-radius: 15px;
+}
+
+.br-10 {
+	border-radius: 10px;
+}
+
+.br-8 {
+	border-radius: 8px;
+}
+
+.overlay {
+
+	padding: 30px;
+	background: rgba(255, 255, 255, 0.9);
+	width: 100%;
+	height: 100%;
+}
+
+.op-sec {
+	color: $secondary-color;
+}
+
+.op-pri {
+	color: $primary-color !important;
+}
+
+.op-ter {
+	color: $ternary-color !important;
+}
+.op-bg-ter {
+	background-color: $ternary-color !important;
+}
+
+.dark-color{
+	color: $dark-color;
+}
+
+.op-primary {
+	background-color: $primary-color;
+}
+
+.op-bg-sec {
+	background-color: $secondary-color;
+}
+
+.op-bg {
+	background-color: $bg-color2;
+}
+.op-bg-two {
+	background-color:#EEEEEE;
+}
+
+.op-body-color-2 {
+	color: #B7BFB4;
+}
+
+.op-bg-three {
+	background-color: #2B2927;
+}
+
+.op-white {
+	color: $white
+}
+
+.op-title {
+	color: $title-color;
+}
+
+.op-body-color {
+	color: $body-color;
+}
+
+.bg-two {
+	background-color: #f5f8fa;
+}
+
+
+.f-w-500 {
+	font-weight: 500 !important;
+}
+
+.f-w-600 {
+	font-weight: 600 !important;
+}
+
+.f-w-400 {
+	font-weight: 400 !important;
+}
+
+.fs-20 {
+
+
+	font-weight: 600;
+	font-size: 20px;
+
+	color: #000;
+
+	&-black {
+		color: $title-color;
+	}
+
+
+
+
+	@media #{$md,$xs,$sm } {
+		font-size: 18px;
+	}
+
+
+
+}
+
+.fs-18 {
+
+
+
+	font-weight: 600;
+	font-size: 18px;
+	color: #032331;
+	line-height: 1.67;
+
+	&-white {
+		color: #878C8F;
+	}
+	&-dark{
+		color: $dark-color;
+	}
+
+	&-white2 {
+		color: $white;
+	}
+
+	&-white3 {
+		color: #6e5946;
+	}
+
+	    @media #{$md,$xs,$sm } {
+                font-size: 16px;
+            }
+}
+
+.fs-24 {
+
+	font-weight: 600;
+	font-size: 24px;
+
+	line-height: 1.47;
+	color: $title-color;
+
+	@media #{$xs,$sm,$xl,$lg,$md } {
+		font-size: 20px;
+	}
+
+	&-white {
+		color: $white;
+	}
+
+	&-2 {
+		color: #2b2927;
+	}
+
+	&-three {
+		color: $body-color;
+	}
+    @media #{$md,$xs,$sm } {
+                font-size: 20px;
+            }
+
+			&-four{
+				color: #01253d;
+			}
+
+}
+
+.fs-14 {
+
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 157%;
+
+	color: #000;
+
+	&-white {
+		color: $white;
+	}
+}
+
+.fs-16 {
+
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 162%;
+
+	color: #c1cbd0;
+
+	&-white {
+		color: $white;
+	}
+
+	&-white2{
+		color: #878c8f;
+		font-weight: 400;
+	}
+
+	&-black{
+		color: #121212;
+	}
+
+	    @media #{$md,$xs,$sm } {
+                font-size: 14px;
+            }
+}
+
+.fs-40 {
+
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 1;
+	text-align: center;
+	color: $title-color;
+
+	&-white {
+		color: $white;
+	}
+
+	   @media #{$lg,$md} {
+              font-size: 35px;
+
+
+        } 
+
+	   @media #{$sm,$xs} {
+              font-size: 30px;
+
+
+        } 
+}
+
+.fs-45 {
+
+	font-weight: 600;
+	font-size: 45px;
+	color: $white;
+
+	&-two {
+		color: $title-color;
+	}
+
+	&-three {
+		color: #2b2927;
+	}
+	      @media #{$sm,$lg,$md,$xs} {
+              font-size: 35px;
+
+
+        } 
+
+}
+
+.fs-30 {
+
+	font-weight: 600;
+	font-size: 30px;
+	color: $title-color;
+ @media #{$xs,$sm,$md} {
+        font-size: 24px;
+            }
+	&-white {
+		color: $white;
+	}
+}
+
+.bg-img {
+
+	background-size: cover;
+	position: relative;
+	object-position: center;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background-color: $ternary-color;
+		opacity: 95%;
+
+	}
+}
+
+.lh-175 {
+	line-height: 1.75;
+}
+
+
+.op-bgColor-box{
+	&-item{
+		width: 15px;
+		height: 15px;
+		background-color: $title-color;
+		border-radius: 50%;
+		&:nth-child(2){
+		background-color: #ACCADD;
+
+		}
+		&:nth-child(3){
+		background-color: #878C8F;
+
+		}
+	}
+}

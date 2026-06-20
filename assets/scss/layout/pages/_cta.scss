@@ -1,0 +1,295 @@
+@use '../../utils' as *;
+
+.op-cta {
+    background: #01253d;
+    position: relative;
+    border-radius: 20px;
+
+    cite {
+        width: 500px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.4);
+        display: inline-block;
+        margin-bottom: 4px;
+
+        @media #{$sm,$xs} {
+
+            display: none;
+        }
+    }
+
+    .pr-90 {
+        @media #{$sm,$xs} {
+
+            padding-right: 0;
+        }
+    }
+
+    &-shape {
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    &-thumb {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        @media #{$xl} {
+
+            img {
+                width: 80%;
+            }
+        }
+
+        @media #{$lg} {
+
+            img {
+                width: 60%;
+            }
+        }
+
+        @media #{$sm,$xs} {
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &-tabBtn {
+        background-color: #214d6a;
+        padding: 14px 24px;
+        border-radius: 5px;
+
+        @media #{$md,$xs,$sm} {
+
+            padding: 14px;
+        }
+
+        &-list {
+            @media #{$lg,$md,$xs,$sm} {
+
+                padding-bottom: 50px;
+            }
+        }
+
+        &.active {
+            background-color: #018CE9;
+            @include transition(.4s);
+        }
+    }
+}
+
+.op-intstagram-two {
+    margin-right: -255px;
+    margin-left: -100px;
+    position: relative;
+
+    @media #{$xs,$sm} {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    &-btn {
+
+        background-color: $white;
+        padding: 14px 29px;
+        border-radius: 10px;
+
+        &-box {
+            position: absolute;
+            top: 50%;
+
+            transform: translate(-20%, -20%);
+            left: 825px !important;
+            z-index: 2;
+
+            @media #{$xs,$sm,$md} {
+                left: 20% !important;
+            }
+        }
+    }
+
+}
+
+.op-instagram {
+    &-btn {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        background-color: $white;
+        text-align: center;
+        border-radius: 50%;
+        @include center();
+        text-align: center;
+    }
+
+    &-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+.op-location {
+    &-card {
+        padding: 32px;
+
+        @media #{$sm,$xs,$md,$lg} {
+            padding: 0;
+        }
+
+        &-middle {
+            background-color: #f5f8fa;
+            padding: 32px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+
+            @media #{$sm,$xs,$md,$lg} {
+                padding: 20px;
+            }
+        }
+    }
+
+    &-icon {
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background-color: $ternary-color;
+        color: $white;
+        text-align: center;
+    }
+
+    &-address {
+        padding-top: 20px;
+        border-top: 1px solid #d9d9d9;
+        margin-top: 30px;
+
+        &-icon {
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: $white;
+        }
+    }
+}
+
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.op-hero-coming {
+
+    padding: 335px 150px 185px;
+    background-size: cover;
+
+    @media #{$md,$lg} {
+        padding: 157px 40px 52px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    @media #{$sm,$xs} {
+        padding: 157px 20px 80px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}
+
+.content-card {
+    background: rgba(0, 24, 43, 0.85);
+    color: $white;
+    padding: 90px 20px;
+
+    border-radius: 20px;
+    backdrop-filter: blur(10px); // Adds modern glass effect
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: radial-gradient(50% 50% at 50% 50%, #1e6a9e 0%, #01253d 100%);
+   @media #{$sm,$xs,$md} {
+        padding: 20px 24px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}
+
+ 
+
+// Form Styling
+.custom-input-group {
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 8px;
+    max-width: 500px;
+    margin: auto;
+
+    .form-control {
+        background: transparent;
+        border: none;
+        color: white !important;
+        padding-left: 15px;
+        width: calc(100% - 39%);
+
+        @media #{$sm,$xs,$md} {
+            width: 100%;
+        }
+
+        &:focus {
+            box-shadow: none;
+            background: transparent;
+            color: white;
+        }
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+
+}
+
+// Responsive adjustments
+@media (max-width: 576px) {
+
+
+    .countdown-container {
+        gap: 10px;
+
+        .timer-unit .number-box {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+
+        }
+    }
+
+    .custom-input-group {
+        flex-direction: column;
+        gap: 10px;
+        background: transparent;
+        border: none;
+        padding: 0;
+
+        .form-control {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@use '../../utils' as *;
+
+.op-aboutUs {
+
+  .op-section-title, .fs-18{
+        @media #{$xs,$md,$sm,$lg } {
+br{
+   display: none;
+}
+    }
+  }
+
+  &__content {
+    border-left: 1px solid $primary-color;
+    padding-left: 45px;
+  }
+
+  &__shape {
+    top: -40px;
+    right: 100px;
+    z-index: 1;
+
+    @media #{$xlm} {
+      top: -78px;
+      right: 40px;
+     
+    }
+    @media #{$xl } {
+    right: 0;
+           top: -75px;
+    }
+    @media #{$xs,$md,$sm,$lg } {
+ display: none;
+    }
+
+  }
+
+  &__thumb {
+    img {
+      position: relative;
+      z-index: 3;
+    }
+  }
+}
+
+.op-aboutUs__shape__desc {
+  top: 60px;
+  position: inherit;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  text-align: center;
+}

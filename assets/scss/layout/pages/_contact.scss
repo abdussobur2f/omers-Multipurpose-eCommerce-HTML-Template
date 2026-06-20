@@ -1,0 +1,182 @@
+@use '../../utils' as *;
+
+.op-contact {
+
+    &-forget{
+        &:hover{
+            text-decoration: underline;
+            @include transition(.4s);
+            color: $ternary-color;
+        }
+    }
+    &-group {
+        padding: 60px;
+        background-color: $white;
+        box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.07);
+        border-radius: 15px;
+
+        @media #{$xs,$md,$lg } {
+            padding: 30px;
+        }
+    }
+
+    &-wrapper {
+        padding: 40px;
+        background-color: #f5f8fa;
+
+        @media #{$sm,$xs} {
+            padding: 30px 20px;
+        }
+    }
+
+    &-address {
+        &-item {
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            background: #fff;
+            border: 1px solid rgba(17, 25, 61, 0.15);
+            border-radius: 15px;
+            padding: 27px 30px;
+
+            @media #{$sm,$xs,$md,$lg} {
+                padding: 20px 12px;
+                gap: 10px;
+            }
+        }
+
+        &-icon {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: $title-color;
+            border-radius: 50%;
+
+            &-two {
+                background-color: $ternary-color;
+            }
+        }
+    }
+
+    input,
+    textarea {
+        padding: 22px 25px;
+        background-color: $white;
+        border-radius: 10px;
+        width: 100%;
+        color: $title-color !important;
+        opacity: 100% !important;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+
+        @media #{$sm,$xs} {
+            padding: 12px 15px;
+        }
+    }
+
+    
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select select {
+  width: 100%;
+        color: $title-color !important;
+ 
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+          padding: 22px 25px;
+             @media #{$sm,$xs} {
+            padding: 12px 15px;
+        }
+}
+
+.custom-select::after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+}
+
+    &-cheak {
+        border-radius: 4px;
+        width: 17px !important;
+        height: 17px;
+    }
+
+    &-login {
+        background-color: #f5f8fa;
+        padding: 40px;
+        height: 440px;
+
+        @media #{$sm,$xs} {
+            padding: 20px;
+            height: 100%;
+        }
+    }
+
+    &-trackID {
+        background-color: #f5f8fa;
+        padding: 84px 224px;
+
+        @media #{$sm,$xs,$md} {
+            padding: 20px;
+            height: 100%;
+        }
+    }
+
+    &-account {
+        max-width: 872px;
+        margin: auto;
+
+        & input {
+            padding: 18px 25px 18px 18px;
+        }
+
+        &-option {
+            &-item {
+                border: 1px solid rgba(0, 0, 0, 0.15);
+                border-radius: 10px;
+                padding: 18px 0;
+                text-align: center;
+
+                 @media #{$sm,$xs,$md} {
+                padding: 12px 0;
+        
+        }
+
+               
+            }
+        }
+    }
+
+
+    // .form-check-input {
+    //     border: 1px solid $title-color;
+    //     outline: none;
+
+    //     &:checked {
+    //         background-color: $primary-color;
+    //         border-color: transparent;
+    //         border: none;
+    //     }
+    // }
+
+    // &-blogDetails {
+
+    //     input,
+    //     textarea {
+    //         border: 1px solid rgba(87, 89, 92, 0.5);
+    //         border-radius: 8px;
+    //         background-color: transparent;
+    //     }
+    // }
+
+
+
+}

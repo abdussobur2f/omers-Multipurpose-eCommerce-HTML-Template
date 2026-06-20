@@ -1,0 +1,209 @@
+@use '../utils' as *;
+
+/*--
+    - Margin & Padding
+-----------------------------------------*/
+/*-- Margin Top --*/
+@for $i from 1 through 150 {
+    .mt-#{1 * $i}{margin-top: 1px * $i;}
+}
+/*-- Margin Bottom --*/
+@for $i from 1 through 150 {
+    .mb-#{1 * $i}{margin-bottom: 1px *$i;}
+}
+/*-- Margin Left --*/
+@for $i from 1 through 150 {
+    .ml-#{1 * $i}{margin-left: 1px * $i;}
+}
+
+/*-- Margin Right --*/
+@for $i from 1 through 100 {
+    .mr-#{1 * $i}{margin-right: 1px *$i;}
+}
+
+/*-- Padding Top --*/
+@for $i from 1 through 200 {
+    .pt-#{1 * $i}{padding-top: 1px *$i;}
+}
+
+/*-- Padding Bottom --*/
+@for $i from 1 through 250 {
+    .pb-#{1 * $i}{padding-bottom: 1px *$i;}
+}
+
+/*-- Padding Left --*/
+@for $i from 1 through 200 {
+    .pl-#{1 * $i}{padding-left: 1px *$i;}
+}
+
+/*-- Padding Right --*/
+@for $i from 1 through 200 {
+    .pr-#{1 * $i}{padding-right: 1px *$i;}
+}
+/*-- Padding left Right --*/
+@for $i from 1 through 100 {
+    .px-#{1 * $i}{
+        padding-right: 1px *$i;
+        padding-left: 1px *$i;
+    
+    }
+}
+/*-- Padding left Right --*/
+@for $i from 1 through 100 {
+    .gp-#{1 * $i}{
+        gap: 1px *$i;
+         
+    
+    }
+}
+
+
+
+.pb-80{
+
+  @media #{$sm,$xs,$md} {
+     padding-bottom:  50px;
+    }
+  @media #{$xl,$lg} {
+     padding-bottom:  50px;
+    }
+}
+.mb-80{
+
+  @media #{$sm,$xs,$md} {
+     margin-bottom:  50px;
+    }
+}
+
+
+.pb-70{
+
+  @media #{$sm,$xs,$md} {
+     padding-bottom:  50px;
+    }
+}
+
+.mt-70{
+
+  @media #{$sm,$xs,$md} {
+     margin-top:  50px;
+    }
+}
+.mb-70{
+
+  @media #{$sm,$xs,$md} {
+     margin-bottom:  50px;
+    }
+}
+.mt-60{
+
+  @media #{$sm,$xs,$md} {
+     margin-top:  40px;
+    }
+}
+.mb-60{
+
+  @media #{$sm,$xs,$md} {
+     margin-bottom:  40px;
+    }
+}
+
+.pb-150{
+
+      @media #{$sm,$xs,$md} {
+        padding-bottom: 80px;
+       
+    }
+      @media #{$xl,$lg} {
+        padding-bottom: 120px;
+      }
+}
+.pt-150{
+
+      @media #{$sm,$xs,$md} {
+        padding-top: 80px;
+       
+    }
+      @media #{$xl,$lg} {
+        padding-top: 120px;
+      }
+}
+.mb-150{
+
+      @media #{$sm,$xs,$md} {
+        margin-bottom:  80px;
+       
+    }
+      @media #{$xl,$lg} {
+        margin-bottom: 120px;
+      }
+}
+.mb-100{
+
+      @media #{$sm,$xs,$md} {
+        margin-bottom:  50px;
+       
+    }
+      @media #{$xl,$lg} {
+        margin-bottom: 120px;
+      }
+}
+.mt-150{
+
+      @media #{$sm,$xs,$md} {
+        margin-top:  80px;
+       
+    }
+      @media #{$xl,$lg} {
+        margin-top: 120px;
+      }
+}
+.mt-100{
+
+      @media #{$sm,$xs,$md} {
+        margin-top:  50px;
+       
+    }
+      @media #{$xl,$lg} {
+        margin-top: 120px;
+      }
+}
+
+.split-text{
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------- */
+/*  Custom 1720px Container (New Class)     */
+/* ---------------------------------------- */
+.custom-container {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+}
+
+@media (min-width:1400px) {
+  .custom-container {
+    max-width: 1745px;
+  }
+}
+
+.mt-60{
+	  @media #{$sm,$xs,$md} {
+           margin-top: 40px;
+
+
+        }
+}
+.mt-50,.mt-35{
+	  @media #{$sm,$xs,$md} {
+           margin-top: 30px;
+
+
+        }
+}

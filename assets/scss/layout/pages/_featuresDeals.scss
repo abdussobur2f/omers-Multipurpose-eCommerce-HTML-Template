@@ -1,0 +1,90 @@
+@use '../../utils' as *;
+
+.op-featuresDeals {
+    &__card {
+        position: relative;
+
+        overflow: hidden;
+        background-color: $white;
+        border-radius: 20px;
+        padding: 20px;
+
+    @media #{ $sm,$xs} {
+           padding: 10px;
+
+            }
+
+        @media #{$lg,$xl,$xlm,$md} {
+            height: 100%;
+
+        }
+    }
+
+
+    &__content {
+        background-color: $white;
+
+
+        padding-bottom: 20px;
+
+        .fs-24 {
+            @media #{$xl,$xlm} {
+                font-size: 20px;
+
+            }
+        }
+
+        &__midle {
+            padding: 55px 54px 0px 54px;
+
+            // @media #{$xl} {
+            //     padding: 71px 54px 42px 55px;
+            // }
+            @media #{ $sm,$xs} {
+           padding: 10px;
+
+            }
+        }
+    }
+
+    &__time {
+   @include flexbox();
+        column-gap: 8px;
+        justify-content: center;
+
+        @media #{$lg} {
+       @include flexbox();
+            column-gap: 8px;
+            flex-wrap: wrap;
+            gap: 8px;
+
+
+
+        }
+
+        .fs-14 {
+            @media #{$xl,$lg} {
+                font-size: 10px;
+            }
+        }
+
+        &__box {
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            width: 52px;
+            height: 55px;
+       @include flexbox();
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            @media #{$xl,$lg} {
+                width: 40px;
+                height: 40px;
+            }
+
+        }
+    }
+
+    
+}

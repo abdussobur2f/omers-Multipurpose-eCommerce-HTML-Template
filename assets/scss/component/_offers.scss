@@ -1,0 +1,99 @@
+@use '../utils' as *;
+
+.op-offer {
+    &__bg {
+        img {
+            @media #{$lg,$md,$xs,$sm } {
+                height: 400px;
+                max-width: 100%;
+                border-radius: 20px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__content {
+        &__one {
+            background-color: #F3E4DD;
+            height: 100%;
+
+            @media #{$lg,$md,$xs,$sm } {
+                height: 400px;
+                max-width: 100%;
+                border-radius: 20px;
+                object-fit: cover;
+            }
+        }
+
+
+
+        &__box {
+            position: absolute;
+            top: 80px;
+            left: 53px;
+
+            @media #{$xl,$lg ,$md,$sm,$xs} {
+                top: 20px;
+                left: 20px;
+            }
+
+            &__two {
+                top: 45px;
+                left: 40px;
+
+                @media #{$xl,$lg ,$md,$sm,$xs} {
+                    top: 20px;
+                    left: 20px;
+                }
+            }
+        }
+
+    }
+
+    &-three {
+        background-color: #01253d;
+
+        &-shape {
+            left: 0;
+            right: 0;
+        }
+
+        &-thumb {
+            @media #{$lg,$md,$xs,$sm,$xl } {
+
+                padding-top: 0px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.op-specialOffer {
+    &-time {
+        position: absolute;
+        top: 50px;
+        left: 40px;
+
+        @media #{$lg,$md,$xs,$sm } {
+            left: 20px;
+            top: 20px;
+        }
+
+
+    }
+
+
+    &-thumb {
+
+                @media #{$xs,$sm } {
+           &>img {
+            height: 350px;
+            width: 100%;
+        }
+        }
+       
+    }
+}

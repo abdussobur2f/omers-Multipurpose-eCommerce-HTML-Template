@@ -1,0 +1,117 @@
+@use '../utils' as *;
+
+.op-section {
+
+   
+    &-title {
+
+        font-weight: 600;
+        font-size: 55px;
+
+        color: $header-color;
+        position: relative;
+        white-space: nowrap;
+        align-items: center;
+        column-gap: 44px;
+        display: flex;
+
+        &-border {
+
+            @media #{$sm,$xs,$md} {
+                display: none !important;
+
+
+            }
+        }
+
+        @media #{$sm,$xs} {
+            white-space: wrap;
+
+
+        }
+
+        &-border {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(33, 118, 142, 0.3);
+            display: inline-block;
+
+            &-2 {
+                background-color: rgba(140, 77, 40, 0.5);
+            }
+            &-three{
+                background: rgba(1, 37, 61, 0.3);
+            }
+        }
+
+        &-white {
+            color: $white;
+        }
+
+        @media #{$xl,$lg,$md } {
+
+            font-size: 40px;
+
+
+
+        }
+
+   
+
+        @media #{$sm,$xs } {
+
+            font-size: 30px;
+ 
+
+
+        }
+
+
+        &-two {
+            color: #cf7642;
+        }
+
+        &-3 {
+            color: #2b2927;
+        }
+    }
+
+
+    &-subtitle {
+
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 167%;
+
+        color: $primary-color;
+
+        &-two {
+            color: $secondary-color;
+        }
+
+        &-white {
+            color: $white;
+        }
+
+        &-three {
+            color: #018ce9;
+        }
+
+    }
+}
+.section-title{
+     &-wrapper{
+          @media #{$sm,$xs,$md} {
+             flex-wrap: wrap;
+             gap: 20px;
+
+
+        } 
+          @media #{$lg} {
+             gap: 40px;
+
+
+        } 
+    }
+}

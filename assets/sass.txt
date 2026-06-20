@@ -1,0 +1,2 @@
+
+sass --watch "F:\themeforest-project\omers-ecommerce\assets\scss\main.scss":"F:\themeforest-project\omers-ecommerce\assets\css\style.css"

@@ -1,0 +1,40 @@
+@use '../utils' as *;
+
+
+#backToTop {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    bottom: 90px;
+    right:30px;
+ width: 40px;
+ height: 40px;
+ line-height: 40px;
+ text-align: center;
+    font-size: 20px;
+    background-color: $primary-color;
+ color: $white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 20;
+ transform: scale(.6);
+}
+
+
+
+#backToTop.visible {
+   visibility: visible;
+   animation:   .5s forwards cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+ opacity: 1;
+ transform: scale(1);
+            @include transition(.6s);
+ &:hover{
+      background-color: $title-color;
+    }
+
+}
+ 
+ 
+ 

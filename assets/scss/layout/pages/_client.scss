@@ -1,0 +1,28 @@
+@use '../../utils' as *;
+
+
+
+.brand-animation {
+	-webkit-transition-timing-function: linear !important;
+	transition-timing-function: linear !important;
+}
+
+.op-slide-block{
+ 
+    width: auto !important;
+    display: inline-block !important;
+ 
+}
+
+.op-client{
+    &-item{
+        background-color: $bg-color;
+        border-radius: 8px;
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    margin-right: 24px;
+    display: inline-block;
+    }
+}

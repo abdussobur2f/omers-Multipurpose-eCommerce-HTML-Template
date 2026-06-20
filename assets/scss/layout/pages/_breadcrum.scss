@@ -1,0 +1,63 @@
+@use '../../utils' as *;
+
+
+
+.sb-breadcrum {
+    background-color: #01253D;
+
+    &-content {
+        position: absolute;
+
+
+
+ top: 46%;
+        left: 0;
+        right: 0;
+  
+
+    }
+
+    &-thumb {
+        & img {
+
+            object-fit: cover;
+            width: 100%;
+
+            @media #{$xs,$md,$lg ,$sm} {
+                height: 350px;
+             
+            }
+        }
+    }
+
+    &-title {
+        font-weight: 600;
+        font-size: 50px;
+
+        color: #fff;
+
+        @media #{$xs,$md,$lg ,$sm} {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+    }
+
+    ul {
+
+        column-gap: 5px;
+        background-color: #0B79C3;
+        padding: 7px 37px;
+        border-radius: 8px;
+   @media #{$xs ,$sm} {
+        padding: 7px 15px;
+           
+        }
+        li {
+            font-weight: 600;
+            font-size: 16px;
+            color: $white;
+            line-height: 28px;
+            text-transform: capitalize;
+        }
+    }
+}

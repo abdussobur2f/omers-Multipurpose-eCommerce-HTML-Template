@@ -1,0 +1,124 @@
+@use '../../utils' as *;
+
+.op-hotDeals {
+    &__item {
+        background-color: #F3F3ED;
+        overflow: hidden;
+        position: relative;
+
+    }
+
+    &__bg {
+        img {
+            @media #{$sm,$xs,$xl,$lg,$md } {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+
+        &__box {
+            position: absolute;
+            top: 66px;
+            left: 55px;
+
+            @media #{$md,$xl } {
+                left: 30px;
+                top: 40px;
+            }
+
+            @media #{$sm,$xs } {
+                left: 20px;
+                top: 20px;
+            }
+
+        }
+
+        z-index: 3;
+    }
+
+
+    &__thumb {
+        margin: 0 -15px;
+    }
+
+    &__desc {
+        line-height: normal;
+        z-index: 3;
+    }
+
+    &__productTitle {
+        position: absolute;
+        bottom: 34px;
+   @include flexbox();
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+
+    }
+
+
+
+}
+
+.op-exclusive-collection {
+    &-top {
+        background: #01253d;
+
+    }
+
+    &-content {
+        padding: 50px 0 60px 47px;
+
+        @media #{$xs,$sm,$md} {
+            padding: 40px 20px;
+        }
+    }
+
+    &-thumbTwo {
+        background-color: #F3F3ED;
+        width: 265px;
+        height: 265px;
+        line-height: 265px;
+        text-align: center;
+        border-radius: 50%;
+        margin: 0 auto;
+
+        @media #{$lg,$sm,$xs } {
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+
+            img {
+                width: 50%;
+            }
+        }
+    }
+
+    &-item {
+        box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.1);
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        padding: 25px 20px 35px 20px;
+
+        &:hover {
+            .op-exclusive-collection-thumbTwo {
+                img {
+                    transform: scale(1.10);
+                    @include transition(.4s);
+                }
+            }
+        }
+
+    }
+
+    &-price {
+        font-weight: 600;
+        font-size: 24px;
+        color: #018ce9;
+    }
+}

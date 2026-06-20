@@ -1,0 +1,44 @@
+@use '../../utils' as *;
+
+.op-newArrivals {
+    margin: 0 -120px;
+    overflow: hidden;
+                @media #{$sm,$xs} {
+ 
+margin: 0 auto ;
+padding: 0 24px;
+ 
+                }
+    &-three {
+      
+        &-item {
+            background: #f5f8fa;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            padding: 35px 25px;
+            height: 400px;
+            margin-top: 85px;
+       @include flexbox();
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 18px;
+        }
+    }
+
+    .swiper-slide-active{
+
+        .op-newArrivals-three {
+            &-item {
+                height: 472px;
+                margin-top: 38px;
+                background-color: #01253d;
+ img{
+    height: 280px;
+ }
+                .fs-24{
+                    color: $white;
+                }
+            }
+        }
+    }
+}

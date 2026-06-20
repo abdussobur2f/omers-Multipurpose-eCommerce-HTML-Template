@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cookie Banner Demo</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 2000px; /* just for scroll demo */
+    }
+
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #222;
+      color: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transform: translateY(100%);
+      transition: 0.3s;
+    }
+
+    .cookie-banner.show {
+      transform: translateY(0);
+    }
+
+    .cookie-banner button {
+      margin-left: 10px;
+      padding: 6px 12px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .accept {
+      background: #4CAF50;
+      color: white;
+    }
+
+    .decline {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Simple Cookie Banner Demo</h2>
+
+<div class="cookie-banner" id="cookieBanner">
+  <span>This site uses cookies.</span>
+  <div>
+    <button class="accept">Accept</button>
+    <button class="decline">Decline</button>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    // Show on load
+    $("#cookieBanner").addClass("show");
+
+    // Hide on click
+    $(".accept, .decline").click(function () {
+      $("#cookieBanner").removeClass("show");
+    });
+  });
+</script>
+
+</body>
+</html>

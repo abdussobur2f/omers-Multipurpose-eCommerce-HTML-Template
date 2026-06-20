@@ -1,0 +1,376 @@
+@use '../../utils/' as *;
+
+
+
+@media screen and (max-width: 992px) {
+    .mobile-offcanvas {
+        max-width: 90%;
+    }
+
+    .sub-menu{
+        padding-left: 20px;
+    }
+}
+
+.mobile-offcanvas {
+
+
+    &-menu {
+        &-btn {
+            border: 1px solid rgba(1, 37, 61, 0.15);
+            border-radius: 8px;
+            padding: 8px 20px;
+            font-size: 18px;
+
+            &.active{
+                background-color: $primary-color;
+                color: $white;
+                @include transition(.4s) ;
+            }
+        }
+    }
+
+    position: fixed;
+    z-index: 999;
+    background: #ffffff;
+    width: 400px;
+    left: -100%;
+    top: 0;
+    padding: 40px;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+
+         @include transition(.4s) ;
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    scrollbar-width: none;
+
+    @media #{$sm,$md,$xs } {
+        padding: 30px;
+
+
+    }
+
+    &-logo {
+        max-width: 53%;
+    }
+
+    & .fa-chevron-down {
+        @media #{$sm,$md,$xs } {
+            display: none;
+
+
+        }
+    }
+
+
+
+
+    &-header {
+   @include flexbox();
+
+        align-items: center;
+        justify-content: space-between;
+
+        button {
+            & i {
+                font-size: 30px;
+
+
+                &:hover {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+
+
+    &-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+    &-info {
+        &-item {
+            span {
+                font-size: 16px;
+            }
+        }
+
+        &-icon {
+
+
+           width: 50px;
+           height: 50px;
+           line-height: 50px;
+           text-align: center;
+           background-color: $title-color;
+           border-radius: 8px;
+        }
+    }
+
+
+    &-social {
+        & a {
+            display: inline-block;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 39px;
+            border-radius: 40px;
+            color: $black;
+            border: 1px solid rgba(2, 11, 24, 0.1);
+            font-size: 14px;
+
+
+            &:hover {
+                background-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+
+    &-overlay {
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9998;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        opacity: 0;
+
+        background: rgba(24, 24, 24, 0.4);
+
+
+
+        &-open {
+            visibility: visible;
+            opacity: 0.7;
+                @include transition(.7s) ;
+        }
+    }
+
+    &-close {
+        & i {
+            @include transition(.6s);
+            color: $title-color;
+
+            &:hover {
+                transform: rotate(350deg);
+                color: $primary-color;
+            }
+        }
+    }
+
+}
+
+.mobile-offcanvas-open {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    z-index: 9999;
+
+    overflow-y: scroll;
+}
+
+
+
+.mobile-offcanvas-menu {
+
+
+
+    @include transition(.3s);
+
+    li {
+        cursor: pointer;
+
+
+
+        &.active {
+
+            &>a {
+                color: $primary-color;
+            }
+
+        }
+
+
+
+
+
+
+
+        position: relative;
+
+        .menu-close {
+
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: 1px solid $border-color;
+            height: 27px;
+            width: 27px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 27px;
+            border-radius: 3px;
+            @include transition(.3s);
+
+        }
+
+        & a {
+
+            display: block;
+            width: 100%;
+
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: capitalize;
+            color: $title-color;
+            border-bottom: 1px solid $border-color;
+
+
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.sub-menu {
+
+
+
+
+    &>li {
+   @include flexbox();
+        justify-content: space-between;
+        padding: 0;
+
+
+    }
+
+}
+
+.active>.menu-close i {
+    transform: rotate(90deg);
+
+
+
+}
+
+.active>.menu-close {
+    background-color: $primary-color;
+    border: 1px solid $primary-color !important;
+
+    & i {
+        color: $white;
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+// mobile menu box 
+
+/* Container for the mobile menu */
+.menu-mobile-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #f1f1f1;
+ 
+
+    display: none;
+
+     @media #{$md ,$sm,$xs} {
+        @include flexbox();
+             align-items: center;
+            }
+
+}
+
+.menu-mobile-box ul {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-mobile-box ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.menu-mobile-box ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #7e7e7e; /* Neutral gray for inactive */
+        @include transition(.4s) ;
+    line-height: 22px;
+}
+
+/* Icon Styling */
+.menu-mobile-box ul li a i {
+  
+    display: block;
+    font-size: 20px;
+}
+
+.menu-mobile-box ul li a svg {
+    width: 22px;
+    height: 22px;
+    stroke: #7e7e7e;
+        @include transition(.4s) ;
+}
+
+/* Active State & Hover Styling */
+.menu-mobile-box ul li.active a,
+.menu-mobile-box ul li a:hover {
+    color: #ff4c3b; /* Ecommerce Primary Color (Adjust as needed) */
+}
+
+.menu-mobile-box ul li.active a svg,
+.menu-mobile-box ul li a:hover svg {
+    stroke: #ff4c3b; /* Change icon color when active */
+}
+
+/* Subtle animation for the active item */

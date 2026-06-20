@@ -1,0 +1,110 @@
+   
+   @use '../../utils' as *;
+
+   .checkout-container {
+            padding: 60px 0;
+
+
+            
+        .form-control {
+           border: 1px solid rgba(0, 0, 0, 0.12) !important;
+            border-radius: 8px;
+           background: #f5f8fa;
+        }
+
+            /* Form Styling */
+        .form-floating > .form-control:focus, 
+        .form-floating > .form-control:not(:placeholder-shown) {
+            padding-top: 1.625rem;
+            padding-bottom: 0.625rem;
+        }
+
+
+        .form-control:focus {
+            box-shadow: none;
+            border-color: var(--primary-color);
+        }
+
+        /* Order Summary */
+        .order-summary {
+            background: #fff;
+            position: sticky;
+            top: 20px;
+        }
+
+        }
+
+      
+
+    
+        .product-item {
+       @include flexbox();
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .product-item img {
+            width: 60px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-info h6 {
+            font-size: 14px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .product-info small {
+            color: #777;
+        }
+
+        /* Payment Methods */
+        .payment-option {
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+           @include transition(.4s);
+        }
+
+        .payment-option:hover, .payment-option.active {
+            border-color: var(--primary-color);
+            background-color: #fcfcfc;
+        }
+
+        .btn-checkout {
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 700;
+            width: 100%;
+            margin-top: 20px;
+        @include transition(.4s);
+        }
+
+        .btn-checkout:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .badge-qty {
+            background: $ternary-color;
+            color: #fff;
+            font-size: 10px;
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+          text-align: center;
+            border-radius: 50%;
+            position: absolute;
+            margin-left: -10px;
+            margin-top: -5px;
+        }

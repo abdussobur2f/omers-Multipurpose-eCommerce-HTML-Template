@@ -1,0 +1,43 @@
+ :root {
+
+     --sb-white: #FFF;
+     --sb-black: #000;
+     --sb-dark: #1f1f1f;
+     --sb-primary: #21768E;
+     --sb-secondary: #8C4D28;
+     --sb-ternary: #018CE9;
+     --sb-title: #01253D;
+     --sb-body-color: #878c8f;
+     --sb-border: #032331;
+      --sb-dark-color:#01253D;
+     --sb-bg-two: #F6F6F6;
+     --sb-bg: #e9eff2;
+     --sb-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+     --sb-box-shadow-two:box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.06);
+     --sb-overlay-color: #001C52;
+     --sb-gradient:  linear-gradient(90deg, #21768e 0%, #294750 100%);
+ }
+
+ // Theme Color - Defualt Colors
+ $white: var(--sb-white);
+ $black: var(--sb-black);
+ $dark-color:var(--sb-dark-color);
+ $dark: var(--sb-dark);
+ $overlay: var(--sb-overlay-color);
+ $primary-color: var(--sb-primary);
+ $secondary-color: var(--sb-secondary);
+ $ternary-color: var(--sb-ternary);
+ $title-color: var(--sb-title);
+ $header-color: var(--sb-border);
+ $border-color: var(--sb-border);
+ $shadow: var(--sb-box-shadow);
+ $yellow: var(--sb-yellow);
+ $body-color: var(--sb-body-color);
+ $gradient: var(--sb-gradient);
+ $bg-color: var(--sb-bg);
+ $bg-color2: var(--sb-bg-two);
+
+ // Font Variation
+ $icon-font : var(--sb-icon-font-font);
+
+  

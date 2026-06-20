@@ -1,0 +1,158 @@
+@use '../../utils' as *;
+
+.op-specialDeals {
+    background-color: #2B2927;
+    padding: 53px 55px;
+    border-radius: 20px;
+
+
+    @media #{$lg,$md,$xs,$sm} {
+        padding: 40px 24px;
+    }
+
+    &-desc {
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 167%;
+        color: #c3b6af;
+
+        @media #{$xs,$sm} {
+            font-size: 16px;
+        }
+    }
+
+
+
+    &-time {
+        @include flexbox();
+        column-gap: 60px;
+
+        @media #{$xl} {
+            column-gap: 50px;
+        }
+
+        @media #{$lg,$md} {
+            column-gap: 20px;
+        }
+
+        @media #{$xs,$sm} {
+            column-gap: 10px;
+        }
+
+        &-three {
+            column-gap: 35px;
+
+            @media #{$xs,$sm} {
+                column-gap: 10px;
+            }
+
+            .op-specialDeals-time-num {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                width: 90px;
+                height: 90px;
+                line-height: 90px;
+                margin-bottom: 20px;
+
+                @media #{$xs,$sm} {
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 10px;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    margin-bottom: 20px;
+                }
+
+                &:nth-child(even) {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        &-four {
+            column-gap: 0;
+
+            .op-specialDeals {
+                &-time-num {
+                    background: rgba(255, 255, 255, 0.1);
+                    width: 70px;
+                    height: 70px;
+                    line-height: 70px;
+
+                    &:nth-child(even) {
+                        background-color: transparent;
+
+                        @media #{$xs,$sm,$md} {
+                            width: 30px;
+                        }
+                    }
+
+
+                    margin-bottom: 20px;
+                    font-size: 30px;
+
+                    @media #{$xs,$sm,$md} {
+                        background: rgba(255, 255, 255, 0.1);
+                        width: 45px;
+                        height: 45px;
+                        line-height: 44px;
+                        margin-bottom: 20px;
+                        font-size: 16px;
+                    }
+                }
+
+            }
+        }
+
+        &-five {
+
+            column-gap: 0;
+
+            
+        
+
+            .op-specialDeals-time-num {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                width: 90px;
+                height: 90px;
+                line-height: 90px;
+                margin-bottom: 20px;
+
+                @media #{$xs,$sm} {
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 10px;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    margin-bottom: 20px;
+                }
+
+                &:nth-child(even) {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        &-list {
+            text-align: center;
+
+
+            span {
+                color: #c3b6af;
+            }
+        }
+
+        &-num {
+            font-weight: 600;
+            font-size: 55px;
+            text-align: center;
+            color: #fff;
+
+            @media #{$xs,$sm} {
+                font-size: 30px;
+            }
+        }
+    }
+}

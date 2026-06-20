@@ -1,0 +1,285 @@
+@use '../utils' as *;
+/*-----------------------------------------------------------------------------------
+
+    Template Name: omers - Multipurpose eCommerce HTML Template 
+    Description: Omers – Multipurpose eCommerce HTML Template is a modern, flexible, and fully responsive website template designed for building professional online stores across a wide range of industries. Whether you're launching a fashion shop, electronics store, furniture marketplace, or digital products site, Omers provides a clean and scalable foundation.
+    Version: 1.0.0
+
+-----------------------------------------------------------------------------------
+
+/************ TABLE OF CONTENTS ***************
+
+	-----------------
+	*** THEME CSS***
+	-----------------
+	01. Theme Default
+	02. Common Classes
+	03. Default Spacing
+		
+	
+/* TABLE OF CONTENT
+============================
+
+*** Template Components ***
+============================
+	01. Variable CSS
+	02. Common CSS
+	03. Backgrond CSS
+	04. Button CSS
+	05. Icon box CSS
+	06. Heading CSS
+	07. Spacing CSS
+	08. Section title CSS
+	09. Form Filed CSS
+	10. Animation CSS
+	11. Top Header CSS
+	12. Header CSS
+	13. Offcanvas CSS
+	14. Bnnaer CSS
+	15. Services CSS
+	16. Text Slider CSS
+	17. About Us CSS
+	18. Projects CSS
+	19. Features CSS
+	20. Messages CSS
+	21. Testimonial CSS
+	22. Team CSS
+	23. FAQ CSS
+	24. Blog CSS
+	25. Counter CSS
+	26. Video CSS
+	27. Work process CSS
+	28. Brand CSS
+	29. Footer CSS
+	30. Page header CSS
+
+*** Template Pages ***
+=========================
+31. shop Details Page CSS
+32. blog page CSS
+33. blog details page CSS
+34. shop products one page CSS
+35. shop products two page CSS
+35. shop products three page CSS
+36. Contact us page CSS
+============================
+*/
+
+
+
+/*----------------------------------------*/
+/*  1.1 Theme Default
+/*----------------------------------------*/
+
+@import url($font-url);
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+
+}
+
+
+html {
+	overscroll-behavior: none;
+	scroll-behavior: smooth;
+
+
+
+}
+
+
+
+
+/* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
+@supports selector(::-webkit-scrollbar) {
+	::-webkit-scrollbar {
+		background: $bg-color;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: $primary-color;
+		border-radius: 10px;
+
+		&:hover {
+			@include transition(.3s);
+			background-color: $secondary-color;
+		}
+	}
+}
+
+/*---------------------------------
+	typography css start 
+---------------------------------*/
+body {
+	font-family: var(--Urbanist);
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 26px;
+   @media #{$sm,$md,$xs } {
+        font-size: 16px;
+    }
+
+}
+
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0;
+	font-weight: 700;
+
+	color: $black;
+
+}
+
+
+ul,
+figure {
+	margin: 0px !important;
+	padding: 0px;
+	list-style: none;
+}
+
+p,
+span,
+a {
+	font-family: var(--Urbanist);
+	font-size: 18px;
+	font-weight: 500;
+	color: $body-color;
+	//  letter-spacing: .03rem;
+	line-height: 28px;
+	margin: 0;
+
+    @media #{$sm,$md,$xs } {
+        font-size: 16px;
+    }
+ 
+}
+
+.reveal {
+	visibility: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden !important;
+}
+
+
+
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus,
+a:hover {
+
+	text-decoration: none;
+}
+
+
+
+a,
+button {
+	color: inherit;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:focus {
+	outline: 0;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="url"],
+textarea {
+	outline: none;
+ 
+	font-size: 16px;
+	background: transparent;
+	font-weight: 500;
+
+	border: 0;
+	border: none;
+	text-transform: capitalize;
+
+	width: 100%;
+
+ 
+
+}
+
+
+*::placeholder {
+
+	font-size: 16px;
+	opacity: 1;
+}
+.form-control:focus {
+    box-shadow: none;
+    outline: none;
+    /* This keeps the border from changing color if you want a flat look */
+    border-color: #dee2e6; 
+}
+
+h2,
+h1,
+p {
+	@media screen and (max-width: 576px) {
+		br {
+			display: none;
+		}
+
+	}
+}
+
+@media screen and (max-width: 576px) {
+     br{
+		display: none;
+	 }
+	 
+
+}
+
+
+.filter-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  z-index: 1000;
+}
+
+.filter-menu.active {
+  display: block;
+}
