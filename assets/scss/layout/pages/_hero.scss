@@ -246,7 +246,7 @@
         .breakOne {
             display: none;
 
-            @media #{$xlm,$lg,$sm,$md} {
+            @media #{$xlm,$lg,$sm,$md,$xl} {
                 display: block;
             }
         }
